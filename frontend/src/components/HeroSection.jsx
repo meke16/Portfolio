@@ -150,21 +150,26 @@ function HeroSection({ info, stats = {} }) {
               {info?.bio || "I design and build practical web products that feel polished, load fast, and stay easy to maintain. My focus is turning messy requirements into clear, usable experiences."}
             </p>
 
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-              <Link to="/projects"
-                className="px-5 py-2.5 bg-[#ff4500] text-white font-semibold text-sm rounded-md hover:bg-[#cc3700] transition-colors duration-200 shadow-[0_10px_25px_rgba(255,69,0,0.18)]">
-                Explore projects
-              </Link>
+            {/* CTAs - Get in Touch is now prominent */}
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-start">
               <Link to="/contact"
-                className="px-5 py-2.5 border border-white/15 text-white font-semibold text-sm rounded-md hover:bg-white/5 hover:border-white/30 transition-all duration-200">
-                Start a conversation
+                className="group relative px-6 py-3 bg-[#ff4500] text-white font-semibold text-sm rounded-lg hover:bg-[#cc3700] transition-all duration-200 shadow-[0_10px_30px_rgba(255,69,0,0.25)] hover:shadow-[0_14px_40px_rgba(255,69,0,0.35)] hover:-translate-y-0.5 flex items-center justify-center gap-2"
+              >
+                <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                Get in Touch
+                <svg className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+              </Link>
+              <Link to="/projects"
+                className="px-5 py-3 border border-white/15 text-white font-semibold text-sm rounded-lg hover:bg-white/[0.05] hover:border-white/30 transition-all duration-200 flex items-center justify-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                View Projects
               </Link>
               {info?.resume_url && (
                 <a
                   href={info.resume_url}
                   download
-                  className="px-5 py-2.5 flex items-center gap-2 border border-[#ff4500]/30 text-[#ff4500] font-semibold text-sm rounded-md hover:bg-[#ff4500]/10 transition-all duration-200"
+                  className="px-5 py-3 flex items-center gap-2 border border-[#ff4500]/30 text-[#ff4500] font-semibold text-sm rounded-lg hover:bg-[#ff4500]/10 transition-all duration-200"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 5v14m0 0l-6-6m6 6l6-6M5 20h14"/></svg>
                   Resume
