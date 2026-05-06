@@ -130,13 +130,13 @@ export function Navbar({ mobileNavVisible = true }) {
 
               <div className="ml-2 h-5 w-px bg-white/[0.06]" />
 
-              <Link
-                to="/contact"
-                className="relative z-10 ml-2 flex items-center gap-2 px-4 py-2 bg-[#ff4500] text-white text-sm font-semibold rounded-xl hover:bg-[#cc3700] hover:shadow-[0_4px_20px_rgba(255,69,0,0.3)] transition-all duration-200 hover:-translate-y-0.5 whitespace-nowrap"
+              <a
+                href={info?.email ? `mailto:${info.email}` : "#"}
+                className="relative z-10 ml-2 flex items-center gap-2 px-4 py-2 border border-[#ff4500]/30 text-[#ff4500] text-sm font-semibold rounded-xl hover:bg-[#ff4500]/10 transition-all duration-200 hover:-translate-y-0.5 whitespace-nowrap"
               >
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-                Get In Touch
-              </Link>
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                {info?.email || "hello@cherinet.dev"}
+              </a>
             </div>
           </div>
         </div>

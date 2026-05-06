@@ -6,6 +6,19 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px; /* Base size - will be adjusted by JS for display scaling */
+}
+
+/* Improve consistency across zoom levels */
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent layout shifts from zoom */
+* {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 :root {

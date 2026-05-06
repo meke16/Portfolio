@@ -186,6 +186,21 @@ export default function AdminProfile() {
               Add phone
             </button>
           </div>
+          <div className="space-y-1">
+            <label className="block text-sm text-gray-400">Telegram username</label>
+            <input
+              value={form.socials.telegram || ""}
+              onChange={(e) =>
+                setForm({
+                  ...form,
+                  socials: { ...form.socials, telegram: e.target.value },
+                })
+              }
+              placeholder="@yourusername"
+              className="w-full px-3 py-2 rounded-lg bg-gray-950 border border-gray-700 text-white focus:border-blue-500 outline-none"
+            />
+            <p className="text-xs text-gray-500">Used by the floating contact button.</p>
+          </div>
           <div className="space-y-3">
             <label className="block text-sm text-gray-400">Locations</label>
             {form.locations.map((loc, i) => (
